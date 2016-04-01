@@ -1,0 +1,1 @@
+SubCategories = new Meteor.Collection('sub_categories');

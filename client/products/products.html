@@ -1,0 +1,36 @@
+<template name="products">
+	<div class="page-header text-center">
+		<h1>
+			<small>Products</small>
+		</h1>
+		<span class="label-success label">{{category}}</span>
+	</div>
+
+	{{#each productList}}
+		{{> product}}
+	{{else}}
+		<div class="page-header text-center">
+			<h1>
+				<small>
+					{{#if catNotSelected}}
+						Select A Category
+					{{else}}
+						No Products Found
+					{{/if}}
+				</small>
+			</h1>
+		</div>
+	{{/each}}
+</template>
+
+<template name="product">
+	<div class="col-md-6">
+		<ul id="{{_id}}" class="nav nav-list">
+			<li class="thumbnail"><img src="/{{thumb}}" alt="Product thumbnail"></li>
+			<li><strong>{{name}}</strong> <span class="label label-danger bigPrice">Price: {{currency price}}</span></li>
+			<li>{{desc}}</li> 
+			<br />
+			<input class="input input-mini prodqty" placeholder="Quantity" value="0" size="4" />&nbsp; <a href="#" class="btn btn-sm btn-danger addcart">Add</a>
+		</ul>
+	</div>
+</template>

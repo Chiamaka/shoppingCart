@@ -1,0 +1,21 @@
+.thumbnail{
+	width: auto;
+	background-color: #f2f2f2;
+}
+
+.logo{
+	height: 50px;
+	margin-right: 20px;
+}
+
+.bigPrice{
+	font-size: 13px;
+}
+
+.removeCartItem{
+	cursor: pointer;
+}
+
+td.totalCol{
+	text-align: right;
+}
